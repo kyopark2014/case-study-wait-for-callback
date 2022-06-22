@@ -96,6 +96,5 @@ callback이 올때까지 기다리기 위하여 아래 Option을 enable 하여�
 ![image](https://user-images.githubusercontent.com/52392004/175049854-43ffdd13-b989-4df1-ad16-786ced52f787.png)
 
 
-- "Return to main processing"은 Function name으로 "lambda-for-processing"을 
-ㅈㅣ정합 
+- "Return to main processing"은 Function name으로 "lambda-for-processing"을 지정합니다. 
 
