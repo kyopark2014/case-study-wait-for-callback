@@ -17,6 +17,10 @@
 5) Step Function은 결과를 받으면 "Return to main processin" 단계로 state가 바뀌고 원래 계획했던 일을 수행할 수 있습니다. 
 
 
+## lambda-for-task-generator
+
 ## Step Functions
 
+[Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
+## ㄹ
