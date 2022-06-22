@@ -102,7 +102,7 @@ Step function 생성시 아래와 같은 Trust relationship과 Permission을 가
 }
 ```
 
-아래와 같이 SQS와 lambda invite에 대한 퍼미션을 가지고 있어야 합니다. 아래는 예제로 상용전에는 리소스 이름에 맞게 최소 권한으로 설정하여야 합니다. 
+아래와 같이 SQS와 lambda invite에 대한 퍼미션을 가지도록 설정합니다.
 
 ```java
         {
@@ -123,11 +123,6 @@ Step function 생성시 아래와 같은 Trust relationship과 Permission을 가
             "Resource": "arn:aws:sqs:ap-northeast-2:123456789012:VerificationQueue"
         }
 ```        
-
-
-SQS에 task에 대한 정보를 전달하여야 하므로 Lambda의 Policy에 SQS 관련 퍼미션을 추가합니다.
-
-![noname](https://user-images.githubusercontent.com/52392004/175052459-4936b4fa-6900-45af-9921-1b5ae36c2318.png)
 
 
 ## 구성도 설명 
