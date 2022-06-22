@@ -17,38 +17,51 @@
 5) Step Function은 결과를 받으면 "Return to main processin" 단계로 state가 바뀌고 원래 계획했던 일을 수행할 수 있습니다. 
 
 
-## lambda-for-task-generator
+## Console에서 인프라 생성하기 
+
+### lambda-for-task-generator
 
 
 [lambda for task generator의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/task-generator.md)에 따라 task 정보를 만들기 위한 lambda를 생성합니다. 여기서는 간단한 예를 보여주기 위하여 requestId와 timestamp 정보만 만들었습니다. 만약 S3에 새로운 폴더가 생성되어서 처리가 되어야 한다면, requestId에 대한 job을 정의하여 사용 할 수 있습니다. 
 
-## lambda-for-verification-message
+### lambda-for-verification-message
 
 [lambda for verification message의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/verificiation-message.md)에 따라 verification을 위한 이메일 요청을 생성하기 위한 lambda를 만듧합니다. 
 
-## lambda-for-verification-success
+### lambda-for-verification-success
 
 [Lambda for verification success의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/verification-success.md)에 따라 verfication 완료 후에 Step Function에 결과를 전달하는 lambda를 생성합니다.
 
-## lambda-for-processing
+### lambda-for-processing
 
 [Lambda for processing의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/processing.md)에 따라서 사용자의 확인을 받고 원래 해야하는 processing을 수행 할 수 있습니다. 
 
-## SNS 
+### SNS 
 
 Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/sns.md)에 따라 SNS를 생성합니다. 
 
-## SQS 
+### SQS 
 
 "VerificationQueue" 단계에 해당하는 [SQS를 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/sqs.md)합니다. 
 
 
-## Step Functions
+### Step Functions
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
-## Event Bridge
+### Event Bridge
 
 여기에서는 batch job을 수행하기 위해 Event bridge를 사용합니다. [Event Bridge 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/event-bridge.md)에 따라 생성합니다. 
 
 
+## CDK로 인프라 생성하기 
+
+## 실행결과
+
+Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/175076020-748e8f6b-da64-410a-a086-9bc81fddb3bd.png)
+
+링크를 선택하면 API Gateway를 통해 verification api가 실행되어, "wait for callback"의 동작이 완료됩니다. 이때 "lambda for processing"이 동작하면서 아래와 같은 로그를 생성합니다. email을 통한 verification 과정 동안에 workflow는 정지 상태가 되고 sendTaskSuccess을 통해 다시 재개가 됨을 알 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175076687-bada5f7e-7ee3-4690-a02d-51b0f948e08d.png)
