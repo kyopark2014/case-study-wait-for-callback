@@ -1,5 +1,6 @@
 const aws = require('aws-sdk');
 const sns = new aws.SNS();
+var sqs = new aws.SQS({apiVersion: '2012-11-05'});
 
 const apigwUrl = process.env.apigwUrl;
 const apiName = process.env.apiName;
