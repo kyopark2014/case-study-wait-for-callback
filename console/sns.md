@@ -4,7 +4,13 @@
 
 https://ap-northeast-2.console.aws.amazon.com/sns/v3/home?region=ap-northeast-2#/topics
 
-2) 아래와 같이 [SNS subscription]에서 이메일 정보를 등록합니다. 
+2) [Type]으로 Standard를 선택하고 [Name]에 "sns-callback"이라고 입력합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/175156707-84ef740e-8cf4-4cac-81bf-5f358bb85b33.png)
+
+
+
+3) 아래와 같이 [SNS subscription]에서 이메일 정보를 등록합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/175067977-7558ed0b-c2bf-4ec5-a5d5-62c06536cec9.png)
 
