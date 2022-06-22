@@ -37,4 +37,8 @@
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
-## ㄹㄹ
+## Lambda for verification success
+
+[Lambda for verification success의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/verification-success.md)에 따라 verfication 완료 후에 Step Function에 결과를 전달하는 lambda를 생성합니다.
+
+## lambda-for-processing
