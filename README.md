@@ -32,6 +32,7 @@
 
 ## lambda-for-processing
 
+[Lambda for processing의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/processing.md)에 따라서 사용자의 확인을 받고 원래 해야하는 processing을 수행 할 수 있습니다. 
 
 ## SQS 
 
