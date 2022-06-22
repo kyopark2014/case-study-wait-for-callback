@@ -19,8 +19,16 @@
 
 ## lambda-for-task-generator
 
+
+[lambda for task generator의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/task-generator.md)에 따라 task 정보를 만들기 위한 lambda를 생성합니다. 여기서는 간단한 예를 보여주기 위하여 requestId와 timestamp 정보만 만들었습니다. 만약 S3에 새로운 폴더가 생성되어서 처리가 되어야 한다면, requestId에 대한 job을 정의하여 사용 할 수 있습니다. 
+
+## SQS 
+
+"VerificationQueue" 단계에 해당하는 [SQS를 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/sqs.md)합니다. 
+
+
 ## Step Functions
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
-## ㄹ
+## ㄹㄹ
