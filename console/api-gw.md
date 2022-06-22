@@ -15,3 +15,7 @@ https://ap-northeast-2.console.aws.amazon.com/apigateway/main/apis?region=ap-nor
 - 아래와 같이 GET request에 대한 Lambda function으로 "lambda for verification success"를 지정합니다. 
 
 ![noname](https://user-images.githubusercontent.com/52392004/175081931-a8802ed2-dd3f-4f56-949a-ba2a0171f7f8.png)
+
+3) API Gateway 설정후에는 아래처럼 deploy를 해줍니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/175082934-b31d82c6-9525-4241-a270-424038784678.png)
