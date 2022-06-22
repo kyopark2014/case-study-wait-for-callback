@@ -65,3 +65,11 @@ Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩�
 링크를 선택하면 API Gateway를 통해 verification api가 실행되어, "wait for callback"의 동작이 완료됩니다. 이때 "lambda for processing"이 동작하면서 아래와 같은 로그를 생성합니다. email을 통한 verification 과정 동안에 workflow는 정지 상태가 되고 sendTaskSuccess을 통해 다시 재개가 됨을 알 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/175076687-bada5f7e-7ee3-4690-a02d-51b0f948e08d.png)
+
+이때의 step function은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175077436-ed7387df-852e-4c42-90e3-7f5c356e2da2.png)
+
+Step Function의 Execution history를 보면 아래와 같이 정상적으로 동작함을 알 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175077873-8b5a562b-baea-46ac-98b8-78fbb4edb875.png)
