@@ -1,5 +1,7 @@
 # Step Function
 
+## 구현 방법 
+
 1) Step Functions의 Console로 접속하여 [Create state machine]을 선택합니다.
 
 https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#/statemachines
@@ -79,6 +81,9 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
   }
 }
 ```
+
+
+## 구성도 설명 
 
 - "Generate task"의 경우에 Function name으로 "lambda-for-task-generator"를 지정하였습니다. 
 
