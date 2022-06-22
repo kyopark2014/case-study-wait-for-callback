@@ -27,4 +27,6 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
         }
 ```
 
-3) ["lambda for verification success" git repository](https://github.com/kyopark2014/case-study-wait-for-callback/tree/main/lambda-for-verification-success)에서 index.js를 복사하여  
+3) ["lambda for verification success" git repository](https://github.com/kyopark2014/case-study-wait-for-callback/tree/main/lambda-for-verification-success)에서 index.js의 코드를 복사하여, lambda에 붙여 넣기를 합니다. 
+
+
