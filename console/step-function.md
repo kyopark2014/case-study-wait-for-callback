@@ -109,20 +109,11 @@ Step function 생성시 아래와 같은 Trust relationship과 Permission을 가
             "Effect": "Allow",
             "Action": [
                 "lambda:InvokeFunction",
-                "sqs:*"
             ],
             "Resource": [
                 "*"
             ]
-        }
-```        
-
-
-SQS에 task에 대한 정보를 전달하여야 하므로 Lambda의 Policy에 SQS 관련 퍼미션을 추가합니다.
-
-![noname](https://user-images.githubusercontent.com/52392004/175052459-4936b4fa-6900-45af-9921-1b5ae36c2318.png)
-
-```java
+        },
         {
             "Effect": "Allow",
             "Action": [
@@ -131,7 +122,13 @@ SQS에 task에 대한 정보를 전달하여야 하므로 Lambda의 Policy에 SQ
             ],
             "Resource": "arn:aws:sqs:ap-northeast-2:123456789012:VerificationQueue"
         }
-```
+```        
+
+
+SQS에 task에 대한 정보를 전달하여야 하므로 Lambda의 Policy에 SQS 관련 퍼미션을 추가합니다.
+
+![noname](https://user-images.githubusercontent.com/52392004/175052459-4936b4fa-6900-45af-9921-1b5ae36c2318.png)
+
 
 ## 구성도 설명 
 
