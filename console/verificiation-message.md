@@ -3,12 +3,12 @@
 
 
 ```java
-,
         {
             "Effect": "Allow",
             "Action": [
-              "sqs:SendMessage",
-              "sqs:DeleteMessage"
+                "sqs:SendMessage",
+                "sqs:ReceiveMessage",
+                "sqs:DeleteMessage"
             ],
             "Resource": "arn:aws:sqs:ap-northeast-2:677146750822:VerificationQueue"
         }
