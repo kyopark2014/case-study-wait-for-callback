@@ -82,9 +82,9 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
 }
 ```
 
-## Step function 생성시 아래와 같은 Trust relationship과 Permission을 가지도록 IAM Role을 생성하여야 합니다.
- 
-Trust relationship은 아래와 같습니다. 
+## Step Function Role 생성 
+
+Step function 생성시 아래와 같은 Trust relationship과 Permission을 가지도록 IAM Role을 생성하여야 합니다. Trust relationship은 아래와 같습니다. 
 
 ```java
 {
