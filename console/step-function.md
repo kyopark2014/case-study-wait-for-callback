@@ -82,6 +82,40 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
 }
 ```
 
+## Step function 생성시 아래와 같은 Trust relationship과 Permission을 가지도록 IAM Role을 생성하여야 합니다.
+ 
+Trust relationship은 아래와 같습니다. 
+
+```java
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Principal": {
+                "Service": "states.amazonaws.com"
+            },
+            "Action": "sts:AssumeRole"
+        }
+    ]
+}
+```
+
+아래와 같이 SQS와 lambda invite에 대한 퍼미션을 가지고 있어야 합니다. 아래는 예제로 상용전에는 리소스 이름에 맞게 최소 권한으로 설정하여야 합니다. 
+
+```java
+        {
+            "Effect": "Allow",
+            "Action": [
+                "lambda:InvokeFunction",
+                "sqs:*"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+```        
 
 ## 구성도 설명 
 
