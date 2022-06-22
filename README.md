@@ -34,6 +34,10 @@
 
 [Lambda for processing의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/processing.md)에 따라서 사용자의 확인을 받고 원래 해야하는 processing을 수행 할 수 있습니다. 
 
+## SNS 
+
+Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/sns.md)에 따라 SNS를 생성합니다. 
+
 ## SQS 
 
 "VerificationQueue" 단계에 해당하는 [SQS를 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/sqs.md)합니다. 
@@ -42,5 +46,6 @@
 ## Step Functions
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
+
 
 
