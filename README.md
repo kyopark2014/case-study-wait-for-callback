@@ -26,6 +26,7 @@
 
 [lambda for verification message의 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/verificiation-message.md)에 따라 verification을 위한 이메일 요청을 생성하기 위한 lambda를 만듧합니다. 
 
+## lambda-for-verification-success
 
 ## SQS 
 
