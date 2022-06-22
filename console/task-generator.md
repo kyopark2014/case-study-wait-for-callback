@@ -4,20 +4,7 @@
 
 https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#/functions
 
-2) SQS에 task에 대한 정보를 전달하여야 하므로 Lambda의 Policy에 SQS 관련 퍼미션을 추가합니다.
-
-![noname](https://user-images.githubusercontent.com/52392004/175052459-4936b4fa-6900-45af-9921-1b5ae36c2318.png)
-
-```java
-        {
-            "Effect": "Allow",
-            "Action": [
-                "sqs:SendMessage",
-                "sqs:DeleteMessage"
-            ],
-            "Resource": "arn:aws:sqs:ap-northeast-2:123456789012:VerificationQueue"
-        }
-```
+2) SQS에 메시지를 보내는것은 Step Function이 수행하므로 별도로 퍼미션을 추가하지 않아도 됩니다. 
 
 3) 소스를 업로드 합니다.
 
