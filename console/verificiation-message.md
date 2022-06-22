@@ -1,6 +1,4 @@
-
-![image](https://user-images.githubusercontent.com/52392004/174974181-af7b79c3-8d77-4098-8536-e45289e354f7.png)
-
+![image](https://user-images.githubusercontent.com/52392004/174974691-6886b63b-8a72-4fc2-b7c4-47aac18256b0.png)
 
 ```java
         {
