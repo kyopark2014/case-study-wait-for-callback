@@ -1,6 +1,6 @@
 # Case Study: "Wait for Callback" 구현
 
-Step Functions을 이용하여 "Wait for Callback"을 구현하고자 합니다. 
+Step Functions을 이용하여 "Wait for Callback" 패턴을 구현하고자 합니다. 
 
 전체적인 Architecture는 아래와 같습니다. 
 
