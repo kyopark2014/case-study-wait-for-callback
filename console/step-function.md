@@ -79,3 +79,23 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
   }
 }
 ```
+
+- "Generate task"의 경우에 Function name으로 "lambda-for-task-generator"를 지정하였습니다. 
+
+- "Request user verfication"은 Function name으로 "VerificationQueue"를 지정하였고, [Enter message]는 아래와 같이 지정합니다. 
+
+```java
+{
+  "Payload.$": "$",
+  "TaskToken.$": "$$.Task.Token"
+}
+```
+
+callback이 올때까지 기다리기 위하여 아래 Option을 enable 하여야 합니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175049854-43ffdd13-b989-4df1-ad16-786ced52f787.png)
+
+
+- "Return to main processing"은 Function name으로 "lambda-for-processing"을 
+ㅈㅣ정합 
+
