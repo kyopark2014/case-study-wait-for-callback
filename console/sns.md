@@ -10,4 +10,4 @@ https://ap-northeast-2.console.aws.amazon.com/sns/v3/home?region=ap-northeast-2#
 
 이메일은 아래와 같은 Confirm 과정을 진행하여야 사용할 수 있습니다. 
 
-<img width="541" alt="image" src="https://user-images.githubusercontent.com/52392004/174943259-5e27ecaf-5981-40ce-b8ee-6147f6c4f58b.png">
+![noname](https://user-images.githubusercontent.com/52392004/175068266-b9fd8051-343d-49aa-a7ef-c8a957678e2c.png)
