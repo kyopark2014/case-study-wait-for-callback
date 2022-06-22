@@ -7,17 +7,10 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
 
 2) SQS와 Step Function에 대한 퍼미션을 "Lambda for verification success"의 Policy에 추가합니다.
 
-![noname](https://user-images.githubusercontent.com/52392004/175063278-66adcd8a-2ad4-4808-b571-4e4f712acd38.png)
+![noname](https://user-images.githubusercontent.com/52392004/175167389-968623e2-cc2f-4b25-a93e-28a07bf6b237.png)
+
 
 ```java
-        {
-            "Effect": "Allow",
-            "Action": [
-                "sqs:SendMessage",
-                "sqs:DeleteMessage"
-            ],
-            "Resource": "arn:aws:sqs:ap-northeast-2:677146750822:VerificationQueue"
-        },
         {
             "Effect": "Allow",
             "Action": [
