@@ -76,4 +76,4 @@ Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩�
 
 Step Function의 Execution history를 보면 아래와 같이 정상적으로 동작함을 알 수 있습니다.
 
-![image](https://user-images.githubusercontent.com/52392004/175077873-8b5a562b-baea-46ac-98b8-78fbb4edb875.png)
+![image](https://user-images.githubusercontent.com/52392004/175083851-0b90e096-b957-4dec-af18-874902e5d117.png)
