@@ -96,7 +96,7 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
 }
 ```
 
-- callback이 올때까지 기다리기 위하여 아래 "Request user verfication"의 "Wait for callback" Option을 enable 하여야 합니다.
+- callback이 올때까지 기다리기 위하여 아래와 같이 "Request user verfication"의 "Wait for callback" Option을 enable 하여야 합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/175049854-43ffdd13-b989-4df1-ad16-786ced52f787.png)
 
