@@ -47,5 +47,8 @@ Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
+## Event Bridge
+
+여기에서는 batch job을 수행하기 위해 Event bridge를 사용합니다. [Event Bridge 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/event-bridge.md)에 따라 생성합니다. 
 
 
