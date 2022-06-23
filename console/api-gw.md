@@ -16,6 +16,27 @@ https://ap-northeast-2.console.aws.amazon.com/apigateway/main/apis?region=ap-nor
 
 ![noname](https://user-images.githubusercontent.com/52392004/175081931-a8802ed2-dd3f-4f56-949a-ba2a0171f7f8.png)
 
+3) Mapping Template의 변경
+
+아래와 같이 Mapping Template로 들어갑니다. 
+
+![image](https://user-images.githubusercontent.com/52392004/175227603-7d0ef081-7c3b-4668-a5c7-fe9ae8fde544.png)
+
+[Request body passthrough]는 "When there are no templates definded (recommanded)"를 선택하고, [Content-Type]은 "application/json"을 선택합니다. Template으로 아래의 값을 붙여 넣기 하고 [Save]를 선택합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/175228033-be9b09f7-fab6-48b9-8a54-2cde2f1d3d6a.png)
+
+requestId, timestamp, token을 quary string으로 받은 경우에 아래와 같이 설정합니다. 
+
+```java
+#set($inputRoot = $input.path('$'))
+    {
+        "requestId": "$input.params('requestId')",
+        "timestamp": "$input.params('timestamp')",
+        "token": "$input.params('token')"
+    }
+```
+
 3) API Gateway 설정후에는 아래처럼 deploy를 해줍니다.
 
 ![noname](https://user-images.githubusercontent.com/52392004/175082934-b31d82c6-9525-4241-a270-424038784678.png)
