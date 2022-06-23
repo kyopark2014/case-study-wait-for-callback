@@ -4,9 +4,9 @@ var stepfunctions = new aws.StepFunctions({apiVersion: '2016-11-23'});
 exports.handler = async (event) => {
     console.log('event: '+JSON.stringify((event)));
 
-    const requestId = event.params.querystring.requestId;
-    const timestamp = event.params.querystring.timestamp;
-    const taskToken = event.params.querystring.token;
+    const requestId = event.requestId;
+    const timestamp = event.timestamp;
+    const taskToken = event.token;
 
     console.log("requestid: "+requestId);
     console.log("timestamp: "+timestamp);

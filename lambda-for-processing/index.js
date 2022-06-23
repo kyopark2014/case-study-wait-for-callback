@@ -5,8 +5,8 @@ exports.handler = async (event) => {
     console.log('event: '+JSON.stringify((event)));
 
     // Do something
-    let requestId = event.Payload.requestId;
-    let timestamp = event.Payload.timestamp;
+    let requestId = event.Task.requestId;
+    let timestamp = event.Task.timestamp;
 
     console.log('requestId: '+requestId);
     console.log('timestamp: '+timestamp);
