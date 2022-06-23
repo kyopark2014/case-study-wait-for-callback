@@ -1,4 +1,6 @@
-# Welcome to your CDK TypeScript project
+# CDK로 "Wait-for-Callback"을 Step Function으로 구현하기 
+
+
 
 This is a blank project for CDK development with TypeScript.
 
