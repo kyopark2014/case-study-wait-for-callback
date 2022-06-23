@@ -1,5 +1,7 @@
 # Console에서 인프라 생성하기 
 
+AWS Console을 이용해서 아래와 같이 순차적으로 인프라를 생성할 수 있습니다. 
+
 ## lambda-for-task-generator
 
 
