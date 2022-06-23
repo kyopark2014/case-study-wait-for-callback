@@ -1,6 +1,6 @@
-# "Wait for Callback" 구현
+# Case Study: "Wait for Callback" 구현
 
-여기서는 Step Functions을 이용하여 "Wait for Callback"을 구현하고자 합니다. 
+Step Functions을 이용하여 "Wait for Callback" 패턴을 구현하고자 합니다. 
 
 전체적인 Architecture는 아래와 같습니다. 
 
@@ -49,6 +49,10 @@ Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com
 
 [Step Function](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/step-function.md)에 따라 "Workflow studio"로 Step function을 생성합니다. 
 
+## API Gateway
+
+[API Gateway 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/api-gw.md)에 따라 API Gateway를 생성하빈다. 
+
 ### Event Bridge
 
 여기에서는 batch job을 수행하기 위해 Event bridge를 사용합니다. [Event Bridge 생성](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/event-bridge.md)에 따라 생성합니다. 
@@ -65,3 +69,11 @@ Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩�
 링크를 선택하면 API Gateway를 통해 verification api가 실행되어, "wait for callback"의 동작이 완료됩니다. 이때 "lambda for processing"이 동작하면서 아래와 같은 로그를 생성합니다. email을 통한 verification 과정 동안에 workflow는 정지 상태가 되고 sendTaskSuccess을 통해 다시 재개가 됨을 알 수 있습니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/175076687-bada5f7e-7ee3-4690-a02d-51b0f948e08d.png)
+
+이때의 step function은 아래와 같습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175077436-ed7387df-852e-4c42-90e3-7f5c356e2da2.png)
+
+Step Function의 Execution history를 보면 아래와 같이 정상적으로 동작함을 알 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/52392004/175083851-0b90e096-b957-4dec-af18-874902e5d117.png)
