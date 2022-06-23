@@ -2,6 +2,9 @@
 
 Step Functions을 이용하여 "Wait for Callback" 패턴을 구현하고자 합니다. 
 
+
+## 1) Overall Architecture
+
 전체적인 Architecture는 아래와 같습니다. 
 
 <img width="742" alt="image" src="https://user-images.githubusercontent.com/52392004/175043966-6bda055d-8b18-4487-9aa3-02e76b5fa384.png">
@@ -16,11 +19,11 @@ Step Functions을 이용하여 "Wait for Callback" 패턴을 구현하고자 합
 
 5) Step Function은 결과를 받으면 "Return to main processin" 단계로 state가 바뀌고 원래 계획했던 일을 수행할 수 있습니다. 
 
-## Console로 인프라 생성하기 
+## 2) Console로 인프라 생성하기 
 
 [Console에서 인프라 생성하기](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/console/README.md)를 따라서 인프라를 생성 할 수 있습니다. 전체 flow를 이해하는데 용이하고, AWS console에 익숙해질수 있는 방법입니다. 
 
-## CDK로 인프라 생성하기 
+## 3) CDK로 인프라 생성하기 
 
 [CDK로 "Wait-for-Callback"을 Step Function으로 구현하기](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/cdk-callback/README.md)에서는 [AWS CDK](https://github.com/kyopark2014/technical-summary/blob/main/cdk-introduction.md)를 이용하여 인프라를 생성합니다. 
 
@@ -54,7 +57,7 @@ $ cdk destroy
 ```
 
 
-## 실행결과
+## 4) 실행결과
 
 Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩니다.
 
