@@ -20,7 +20,11 @@ https://ap-northeast-2.console.aws.amazon.com/apigateway/main/apis?region=ap-nor
 
 아래와 같이 Mapping Template로 들어갑니다. 
 
-![image](https://user-images.githubusercontent.com/52392004/175227603-7d0ef081-7c3b-4668-a5c7-fe9ae8fde544.png)
+![noname](https://user-images.githubusercontent.com/52392004/175243091-cbce669b-c8ac-4891-bc50-ec6b88f98af9.png)
+
+
+
+
 
 [Request body passthrough]는 "When there are no templates definded (recommanded)"를 선택하고, [Content-Type]은 "application/json"을 선택합니다. Template으로 아래의 값을 붙여 넣기 하고 [Save]를 선택합니다. 
 
