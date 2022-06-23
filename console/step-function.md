@@ -127,9 +127,13 @@ Step function 생성시 아래와 같은 Trust relationship과 Permission을 가
 
 ## 구성도 설명 
 
-- "Generate task"의 경우에 Function name으로 "lambda-for-task-generator"를 지정하였습니다. 
+1) "Generate task"의 경우에 Function name으로 "lambda-for-task-generator"를 지정하였습니다. 
 
-- "Request user verfication"은 Function name으로 "VerificationQueue"를 지정하였고, [Enter message]는 아래와 같이 지정합니다. 
+
+![noname](https://user-images.githubusercontent.com/52392004/175239445-84494b07-d7d6-4f72-8ccf-f4c4f6715735.png)
+
+
+2) [State name]으로 "Request user verfication"을 입력하고 [Queue URL]을 입력합니다. [Message]는 아래와 같이 지정합니다. 
 
 ```java
 {
@@ -138,10 +142,13 @@ Step function 생성시 아래와 같은 Trust relationship과 Permission을 가
 }
 ```
 
-- callback이 올때까지 기다리기 위하여 아래와 같이 "Request user verfication"의 "Wait for callback" Option을 enable 하여야 합니다.
+![noname](https://user-images.githubusercontent.com/52392004/175239841-1bba4dbf-a171-4b3b-aa54-3a2d30cafe35.png)
+
+
+3) callback이 올때까지 기다리기 위하여 아래와 같이 "Request user verfication"의 "Wait for callback" Option을 enable 하여야 합니다.
 
 ![image](https://user-images.githubusercontent.com/52392004/175049854-43ffdd13-b989-4df1-ad16-786ced52f787.png)
 
 
-- "Return to main processing"은 Function name으로 "lambda-for-processing"을 지정합니다. 
+4) "Return to main processing"은 Function name으로 "lambda-for-processing"을 지정합니다. 
 
