@@ -17,7 +17,7 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
 
 ## State 설정 
 
-1) "Lambda: Invoke"에서 "State name"으로 "Generate task"을 입력 후에, Function name으로 "lambda-for-task-generator"를 지정하였습니다. 
+1) "Lambda: Invoke"에서 "State name"으로 "Generate task"을 입력 후에, Function name으로 "lambda-for-task-generator"의 ARN을 지정하였습니다. 
 
 
 ![noname](https://user-images.githubusercontent.com/52392004/175239445-84494b07-d7d6-4f72-8ccf-f4c4f6715735.png)
