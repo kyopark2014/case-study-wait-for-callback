@@ -60,7 +60,9 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
       "OutputPath": "$.Payload",
       "Parameters": {
         "FunctionName": "arn:aws:lambda:ap-northeast-2:677146750822:function:lambda-for-processing",
-        "Payload.$": "$"
+        "Payload": {
+          "Task.$": "$"
+        }
       },
       "Retry": [
         {
