@@ -78,7 +78,7 @@ $ cd cdk-callback
 topic.addSubscription(new subscriptions.EmailSubscription('user@gmail.com'));
 ```
 
-3)인프라를 설치합니다. 
+3) 인프라를 설치합니다. 
 ```c
 $ cdk deploy
 ```
