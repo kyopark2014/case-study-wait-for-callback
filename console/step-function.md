@@ -26,7 +26,7 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "FunctionName": "arn:aws:lambda:ap-northeast-2:123456789012:function:lambda-for-task-generator"
+        "FunctionName": "arn:aws:lambda:ap-northeast-2:677146750822:function:lambda-for-task-generator"
       },
       "Retry": [
         {
@@ -46,7 +46,7 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
       "Type": "Task",
       "Resource": "arn:aws:states:::sqs:sendMessage.waitForTaskToken",
       "Parameters": {
-        "QueueUrl": "https://sqs.ap-northeast-2.amazonaws.com/123456789012/VerificationQueue",
+        "QueueUrl": "https://sqs.ap-northeast-2.amazonaws.com/677146750822/VerificationQueue",
         "MessageBody": {
           "Payload.$": "$",
           "TaskToken.$": "$$.Task.Token"
@@ -59,10 +59,8 @@ https://ap-northeast-2.console.aws.amazon.com/states/home?region=ap-northeast-2#
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "FunctionName": "arn:aws:lambda:ap-northeast-2:123456789012:function:lambda-for-processing",
-        "Payload": {
-          "Payload.$": "$"
-        }
+        "FunctionName": "arn:aws:lambda:ap-northeast-2:677146750822:function:lambda-for-processing",
+        "Payload.$": "$"
       },
       "Retry": [
         {
