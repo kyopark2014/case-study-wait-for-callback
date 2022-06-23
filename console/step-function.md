@@ -64,7 +64,7 @@ callback이 올때까지 기다리기 위하여 아래와 같이 "Request user v
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "FunctionName": "arn:aws:lambda:ap-northeast-2:677146750822:function:lambda-for-task-generator"
+        "FunctionName": "arn:aws:lambda:ap-northeast-2:123456789012:function:lambda-for-task-generator"
       },
       "Retry": [
         {
@@ -84,7 +84,7 @@ callback이 올때까지 기다리기 위하여 아래와 같이 "Request user v
       "Type": "Task",
       "Resource": "arn:aws:states:::sqs:sendMessage.waitForTaskToken",
       "Parameters": {
-        "QueueUrl": "https://sqs.ap-northeast-2.amazonaws.com/677146750822/VerificationQueue",
+        "QueueUrl": "https://sqs.ap-northeast-2.amazonaws.com/123456789012/VerificationQueue",
         "MessageBody": {
           "Payload.$": "$",
           "TaskToken.$": "$$.Task.Token"
@@ -97,7 +97,7 @@ callback이 올때까지 기다리기 위하여 아래와 같이 "Request user v
       "Resource": "arn:aws:states:::lambda:invoke",
       "OutputPath": "$.Payload",
       "Parameters": {
-        "FunctionName": "arn:aws:lambda:ap-northeast-2:677146750822:function:lambda-for-processing",
+        "FunctionName": "arn:aws:lambda:ap-northeast-2:123456789012:function:lambda-for-processing",
         "Payload": {
           "Task.$": "$"
         }
