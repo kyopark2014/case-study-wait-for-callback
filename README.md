@@ -60,6 +60,38 @@ Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com
 
 ## CDK로 인프라 생성하기 
 
+[CDK로 "Wait-for-Callback"을 Step Function으로 구현하기](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/cdk-callback/README.md)에서는 AWS CDK를 이용하여 인프라를 생성합니다. 
+
+### 인프라 생성방법
+
+아래와 같이 인프라를 생성합니다. 
+
+1) 코드 다운로드 하기 
+```c
+$ git clone https://github.com/kyopark2014/case-study-wait-for-callback
+$ cd cdk-callback
+```
+
+2) ["lib/cdk-callback-stack.ts"](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/cdk-callback/lib/cdk-callback-stack.ts)에서 아래 부분을 수신받을 email 주소로 변경합니다.
+
+```java
+topic.addSubscription(new subscriptions.EmailSubscription('user@gmail.com'));
+```
+
+3)인프라를 설치합니다. 
+```c
+$ cdk deploy
+```
+
+### 인프라 삭제 방법
+
+아래 명령어로 인프라를 한번에 삭제 할 수 있습니다. 
+
+```java
+$ cdk destroy
+```
+
+
 ## 실행결과
 
 Event Bridge가 구동되면 아래와 같은 Verification message가 전달됩니다.
