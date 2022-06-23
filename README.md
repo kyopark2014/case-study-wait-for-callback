@@ -60,7 +60,7 @@ Verfication을 위한 email을 보내기 위해, [SNS 생성](https://github.com
 
 ## CDK로 인프라 생성하기 
 
-[CDK로 "Wait-for-Callback"을 Step Function으로 구현하기](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/cdk-callback/README.md)에서는 AWS CDK를 이용하여 인프라를 생성합니다. 
+[CDK로 "Wait-for-Callback"을 Step Function으로 구현하기](https://github.com/kyopark2014/case-study-wait-for-callback/blob/main/cdk-callback/README.md)에서는 [AWS CDK](https://github.com/kyopark2014/technical-summary/blob/main/cdk-introduction.md)를 이용하여 인프라를 생성합니다. 
 
 ### 인프라 생성방법
 
