@@ -1,7 +1,10 @@
 # CDK로 "Wait-for-Callback"을 Step Function으로 구현하기 
 
+IaC 툴인 [AWS CDK](https://github.com/kyopark2014/technical-summary/blob/main/cdk-introduction.md)을 이용해 인프라를 생성합니다. 여기서는 Typescript로 CDK2.0 기준으로 코드를 작성하고 있습니다.
 
 ## lambda-for-verfication-success
+
+wait가 끝날때 StepFunction으로 success를 보내는 Lambda를 아래와 같이 생성합니다. 
 
 ```java
     // Lambda for verification success
@@ -18,6 +21,12 @@
 
 
 ## API Gateway
+
+이메일을 받고 
+Verification을 
+위해 
+위해 사용자가 
+
 
 ```java
 // API GATEWAY
