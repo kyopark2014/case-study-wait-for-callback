@@ -22,10 +22,7 @@ wait가 끝날때 StepFunction으로 success를 보내는 Lambda를 아래와 �
 
 ## API Gateway
 
-이메일을 받고 
-Verification을 
-위해 
-위해 사용자가 
+이메일을 받고 링크를 선택하면 Verification 동작이 시작됩니다. 이때 링크가 접속하는 경로가 API Gateway의 Endpoint입니다. 여기서는 RESTful API로 GET을 사용하고, querystring을 통해 Verification 대상에 대한 정보를 가져옵니다. 
 
 
 ```java
@@ -122,6 +119,8 @@ Verification을
 
 ## SQS
 
+Step Function이 Wait 되었다가 callback으로 다시 구동할때 Taken Token이 필요하므로 SQS를 사용합니다. 
+
 ```java
     // SQS - queueVerification
     const queue = new sqs.Queue(this, 'VerificationQueue');
@@ -133,6 +132,8 @@ Verification을
 
 
 ## SNS
+
+이메일로 Verification Request를 보내기 위하여 SNS를 준비합니다. 아래와 같이 subscription된 후에 승인된 이메일만 수신이 되므로 메일 주소를 바꿔서 사용하여야 합니다. 
 
 ```java
     // SNS
@@ -150,6 +151,8 @@ Verification을
 
 
 ## lambda-for-task-generator
+
+Task를 정의하는 Lambda를 정의 합니다. 
 
 ```java
     // Lambda for task generator 
@@ -169,6 +172,8 @@ Verification을
 ```
 
 ## lambda-for-verification-message 
+
+SNS를 통해 이메일을 보낼때에 제목과 본문을 준비하는 Lambda를 선언합니다. 이 Lambda는 SQS를 통해 trigger 됩니다. 
 
 ```java
     // Lambda for task generator 
@@ -198,6 +203,8 @@ Verification을
 
 ## lambda-for-processing
 
+callback으로 다시 workflow가 restart되었을때 실제 job을 수행하는 lambda 입니다. 
+
 ```java
     const lambdaProcessing = new lambda.Function(this, "LambdaProcessing", {
       description: 'main processing',
@@ -212,6 +219,8 @@ Verification을
 
 
 ## Step Function
+
+Step function을 아래와 같이 정의 합니다. 
 
 ```java
 //Lambda invocation for generating task
@@ -280,6 +289,8 @@ Verification을
 ```
 
 ## Event Bridge
+
+Batch와 같이 정기적 또는 부정기적으로 Job을 생성할때 event bridge를 이용하여 어떤 job을 시작 할 수 있습니다. 여기서는 편의상 10분만다 event bridge가 Step Function에 job을 요청하도록 하고 있습니다. 
 
 ```java
 // event bridge for batch
