@@ -8,5 +8,5 @@ https://ap-northeast-2.console.aws.amazon.com/lambda/home?region=ap-northeast-2#
 
 3) 소스를 업로드 합니다.
 
-[lambda for task generator의 코드(https://github.com/kyopark2014/case-study-wait-for-callback/tree/main/lambda-for-task-generator)를 lambda로 업로드 합니다. 이때, uuid 생성을 위한 라이브러리가 포함되어야 하므로 zip으로 압축하여 올립니다.
+[lambda for task generator의 코드](https://github.com/kyopark2014/case-study-wait-for-callback/tree/main/lambda-for-task-generator)를 lambda로 업로드 합니다. 이때, uuid 생성을 위한 라이브러리가 포함되어야 하므로 zip으로 압축하여 올립니다.
 
